@@ -5,13 +5,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shape
+namespace Lab1
 {
     /// <summary>
     /// Defines an geometric shape.
     /// </summary>
     public abstract class Shape
     {
+        /// <summary>
+        /// Initializes a new instance of the Shape class whith black color and (0;0) position.
+        /// </summary>
+        protected Shape()
+        {
+            Color = Color.Black;
+            Position = new Point(0,0);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Shape class with the specified color and position.
+        /// </summary>
+        protected Shape(Color color, Point position)
+        {
+            Color = color;
+            Position = position;
+        }
+
+
         /// <summary>
         /// Gets or sets the color of this Shape.
         /// </summary>
