@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Line", "Line\Line.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shapes", "Shapes", "{F0A2AEE4-0F4F-494D-8901-866B5E0D9785}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectlange", "Rectlange\Rectlange.csproj", "{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,16 @@ Global
 		{B491580B-B7F9-4A68-AF3F-2A8BDABAF356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B491580B-B7F9-4A68-AF3F-2A8BDABAF356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B491580B-B7F9-4A68-AF3F-2A8BDABAF356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B491580B-B7F9-4A68-AF3F-2A8BDABAF356} = {F0A2AEE4-0F4F-494D-8901-866B5E0D9785}
+		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F} = {F0A2AEE4-0F4F-494D-8901-866B5E0D9785}
 	EndGlobalSection
 EndGlobal
