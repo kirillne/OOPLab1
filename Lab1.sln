@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectlange", "Rectlange\Rect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellipse", "Ellipse\Ellipse.csproj", "{258E1F9F-DC87-4509-B11F-BA78D2B860EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triangle.csproj", "{D39A167A-8E7C-4873-8084-F851839F0AA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39A167A-8E7C-4873-8084-F851839F0AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39A167A-8E7C-4873-8084-F851839F0AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39A167A-8E7C-4873-8084-F851839F0AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39A167A-8E7C-4873-8084-F851839F0AA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
