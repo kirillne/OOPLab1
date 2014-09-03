@@ -37,7 +37,7 @@ namespace Lab1
         /// <summary>
         /// Initializes a new instance of the Shape class with the specified color, position, points.
         /// </summary>
-        protected PoligonBase(Color color, Point position, List<Point> points )
+        protected PoligonBase(Color color, Point position, IEnumerable<Point> points )
             : base(color, position)
         {
             Points = new List<Point>(points);
