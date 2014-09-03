@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shapes", "Shapes", "{F0A2AE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectlange", "Rectlange\Rectlange.csproj", "{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellipse", "Ellipse\Ellipse.csproj", "{258E1F9F-DC87-4509-B11F-BA78D2B860EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258E1F9F-DC87-4509-B11F-BA78D2B860EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B491580B-B7F9-4A68-AF3F-2A8BDABAF356} = {F0A2AEE4-0F4F-494D-8901-866B5E0D9785}
 		{5CD4F9CA-6B76-4064-8534-99FBCBAB1B2F} = {F0A2AEE4-0F4F-494D-8901-866B5E0D9785}
+		{258E1F9F-DC87-4509-B11F-BA78D2B860EC} = {F0A2AEE4-0F4F-494D-8901-866B5E0D9785}
 	EndGlobalSection
 EndGlobal
