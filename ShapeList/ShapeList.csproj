@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,33 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ellipse\Ellipse.csproj">
-      <Project>{258e1f9f-dc87-4509-b11f-ba78d2b860ec}</Project>
-      <Name>Ellipse</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Line\Line.csproj">
-      <Project>{b491580b-b7f9-4a68-af3f-2a8bdabaf356}</Project>
-      <Name>Line</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Rectlange\Rectlange.csproj">
-      <Project>{5cd4f9ca-6b76-4064-8534-99fbcbab1b2f}</Project>
-      <Name>Rectlange</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RegularPoligon\RegularPoligon.csproj">
-      <Project>{06cd3518-c6f4-4981-ba73-6a3622a1ec4b}</Project>
-      <Name>RegularPoligon</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Shape\Shape.csproj">
       <Project>{f2e9a5d3-d89b-4f93-ae0e-d842183838f7}</Project>
       <Name>Shape</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Trapizoid\Trapizoid.csproj">
-      <Project>{3d45789e-c9fa-49e6-87e6-dd821795545e}</Project>
-      <Name>Trapizoid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Triangle\Triangle.csproj">
-      <Project>{d39a167a-8e7c-4873-8084-f851839f0aa5}</Project>
-      <Name>Triangle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
