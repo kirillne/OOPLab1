@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triang
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularPoligon", "RegularPoligon\RegularPoligon.csproj", "{06CD3518-C6F4-4981-BA73-6A3622A1EC4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapizoid", "Trapizoid\Trapizoid.csproj", "{3D45789E-C9FA-49E6-87E6-DD821795545E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeList", "ShapeList\ShapeList.csproj", "{DD6351E2-452E-464C-896B-CAF238652C6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{06CD3518-C6F4-4981-BA73-6A3622A1EC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06CD3518-C6F4-4981-BA73-6A3622A1EC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06CD3518-C6F4-4981-BA73-6A3622A1EC4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D45789E-C9FA-49E6-87E6-DD821795545E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D45789E-C9FA-49E6-87E6-DD821795545E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D45789E-C9FA-49E6-87E6-DD821795545E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D45789E-C9FA-49E6-87E6-DD821795545E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6351E2-452E-464C-896B-CAF238652C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6351E2-452E-464C-896B-CAF238652C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6351E2-452E-464C-896B-CAF238652C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6351E2-452E-464C-896B-CAF238652C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

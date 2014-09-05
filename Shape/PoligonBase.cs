@@ -49,7 +49,8 @@ namespace Lab1
         /// <param name="graphics">Surfase for drawing.</param>
         public override void Draw(Graphics graphics)
         {
-            graphics.DrawLines(new Pen(Color), Points.ToArray());
+            graphics.DrawLines(new Pen(Color),
+                Points.Select(x => new Point(Position.X + x.X, Position.Y + x.Y)).ToArray());
         }
     }
 }
