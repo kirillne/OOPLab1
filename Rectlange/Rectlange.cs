@@ -40,7 +40,7 @@ namespace Lab1.Shapes
         /// <param name="graphics">Surfase for drawing.</param>
         public override void Draw(Graphics graphics)
         {
-            graphics.DrawRectangle(new Pen(Color),Position.X, Position.Y, Position.X + Width, Position.Y + Height );
+            graphics.DrawRectangle(new Pen(Color, PEN_WIDTH), Position.X, Position.Y, Width, Height);
         }
     }
 }

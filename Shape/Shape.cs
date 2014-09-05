@@ -30,6 +30,10 @@ namespace Lab1
             Position = position;
         }
 
+        /// <summary>
+        /// With of pen.
+        /// </summary>
+        protected  const float PEN_WIDTH = 5.0f;
 
         /// <summary>
         /// Gets or sets the color of this Shape.

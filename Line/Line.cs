@@ -31,7 +31,7 @@ namespace Lab1.Shapes
         /// Initializes a new instance of the Line class with the specified color, position, size.
         /// </summary>
         public Line(Color color, Point position, int height, int width)
-            : base(color, position, height, width
+            : base(color, position, height, width)
         {
         }
 
@@ -41,7 +41,7 @@ namespace Lab1.Shapes
         /// <param name="graphics">Surfase for drawing.</param>
         public override void Draw(Graphics graphics)
         {
-            graphics.DrawLine(new Pen(Color),Position, Position + new Size(Width, Height) );
+            graphics.DrawLine(new Pen(Color, PEN_WIDTH), Position, Position + new Size(Width, Height));
         }
     }
 }

@@ -26,16 +26,18 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Poligon class whith black color, (0;0) position and zero side size.
         /// </summary>
-        protected RegularPoligon() : base()
+        public RegularPoligon()
+            : base()
         {
             CircumscribedСircleRadius = 0;
-            Points = GetTriangePointsBySideSize();
+            Points = GetRegularPoligonPoints();
         }
 
         /// <summary>
         /// Initializes a new instance of the Poligon class with the specified color and position and zero side size.
         /// </summary>
-        protected RegularPoligon(Color color, Point position) : base(color, position)
+        public RegularPoligon(Color color, Point position)
+            : base(color, position)
         {
             CircumscribedСircleRadius = 0;
             Points = GetRegularPoligonPoints();
@@ -53,17 +55,18 @@ namespace Lab1.Shapes
                 result.Add(new Point(CircumscribedСircleRadius + coordinatesByCircleCenter.X,
                     CircumscribedСircleRadius + coordinatesByCircleCenter.Y));
             }
+            return result;
         }
 
         /// <summary>
         /// Initializes a new instance of the Poligon class with the specified color, position, side size.
         /// </summary>
-        protected RegularPoligon(Color color, Point position, int circumscribedСircleRadius, int sidesCount)
+        public RegularPoligon(Color color, Point position, int circumscribedСircleRadius, int sidesCount)
             : base(color, position)
         {
             this.CircumscribedСircleRadius = circumscribedСircleRadius;
             SidesCount = sidesCount;
-            Points = Points = GetRegularPoligonPoints();
+            Points = GetRegularPoligonPoints();
         }
 
     }

@@ -31,28 +31,33 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Trapizoid class whith black color, (0;0) position and zero size.
         /// </summary>
-        protected Trapizoid():base()
+        public Trapizoid()
+            : base()
         {
             Height = 0;
             Width = 0;
             Angle = Math.PI/4;
+            Points = GetTrapizoidPoints();
         }
 
         /// <summary>
         /// Initializes a new instance of the Trapizoid class with the specified color and position and zero size.
         /// </summary>
-        protected Trapizoid(Color color, Point position) : base(color, position)
+        public Trapizoid(Color color, Point position)
+            : base(color, position)
         {
            
 
             Height = 0;
             Width = 0;
             Angle = Angle = Math.PI / 4;
+            Points = GetTrapizoidPoints();
         }
 
         private List<Point> GetTrapizoidPoints()
         {
-            int sideDifferent = Height/(int)Math.Tan(Angle);
+            double tan = Math.Tan(Angle);
+            int sideDifferent = (int)(Height/tan);
             return new List<Point>
             {
                 new Point(sideDifferent, 0),
@@ -66,15 +71,16 @@ namespace Lab1.Shapes
         /// Initializes a new instance of the Line class with the specified color, position, size.
         /// </summary>
         /// <param name="angle">Angle in radians</param>
-        protected Trapizoid(Color color, Point position, int height, int width, double angle)
+        public Trapizoid(Color color, Point position, int height, int width, double angle)
             : base(color, position)
         {
-            if (angle <= 0 || angle > Math.PI/4)
-                throw new ArgumentException("Trapezoid cann't have angle less then 0 or more then pi/4 ");
+            if (Math.Tan(angle) <= height / width * 2.0  || angle > Math.PI /2)
+                throw new ArgumentException("Trapezoid cann't have such angle and size");
 
             Height = height;
             Width = width;
             Angle = angle;
+            Points = GetTrapizoidPoints();
         }
 
     }
