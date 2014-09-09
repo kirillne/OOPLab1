@@ -33,13 +33,16 @@ namespace MainFormApp
         private void drawButton_Click(object sender, EventArgs e)
         {
             var bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
-            var graphics = Graphics.FromImage(bitmap);
-            shapes.DrawAll(graphics);
+            using (var graphics = Graphics.FromImage(bitmap))
+            {
+                shapes.DrawAll(graphics);
+            }
             pictureBox.Image = bitmap;
         }
 
         private void cleanButton_Click(object sender, EventArgs e)
         {
+            pictureBox.Image.Dispose();
             pictureBox.Image = null;
         }
     }
