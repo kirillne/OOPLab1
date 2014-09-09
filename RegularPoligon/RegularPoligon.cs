@@ -36,6 +36,7 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Poligon class with the specified color and position and zero side size.
         /// </summary>
+        [MainShapeConstracter]
         public RegularPoligon(Color color, Point position)
             : base(color, position)
         {

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainShapeConstracterAtribute.cs" />
     <Compile Include="PoligonBase.cs" />
     <Compile Include="RectlangeBaseShape.cs" />
     <Compile Include="Shape.cs" />

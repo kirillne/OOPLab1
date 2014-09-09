@@ -14,21 +14,48 @@ namespace MainFormApp
 {
     public partial class Form1 : Form
     {
+        private const int buttonTop = 5;
+        private const int spaceBetweenButtons = 5;
+        private Size buttonSize = new Size(50,20);
+        private int currentButtonLeft = 0;
+
+        private Dictionary<String, Type> shapesTypes = new Dictionary<string, Type>(); 
+
+        private List<Button> shapeButtons = new List<Button>(); 
+
         public Form1()
         {
             InitializeComponent();
-            shapes = new ShapeList
-            {
-                new Ellipse(Color.Red, new Point(10,10), 50,70),
-                new Line(Color.Black, new Point(200,200), 40,80),
-                new Rectlange(Color.Yellow, new Point(500,200), 450,200),
-                new Triangle(Color.Blue, new Point(700, 300), 100),
-                new RegularPoligon(Color.Green, new Point(50,250), 100, 7),
-                new Trapizoid(Color.Gray, new Point(50, 400), 200, 150, Math.PI/2.5)
-            };
+            shapesTypes = AssemblyLoader.Loader.Load("Shapes");
+            AddButtons();
         }
 
-        private ShapeList shapes;
+        private void AddButtons()
+        {
+            foreach (var shapeType in shapesTypes)
+            {
+                AddButton(shapeType);
+            }
+        }
+
+        private void AddButton(KeyValuePair<string, Type> shapeType)
+        {
+            Button newButton = new Button
+            {
+                Text = shapeType.Key,
+                Height = buttonSize.Height,
+                Width = buttonSize.Width,
+                Top = buttonTop,
+                Left = currentButtonLeft,
+            };
+            currentButtonLeft += buttonSize.Width + spaceBetweenButtons;
+            newButton.Click += ShapeButtonClick;
+            shapeButtons.Add(newButton);
+        }
+
+        private ShapeList shapes = new ShapeList();
+
+        private Shape currentShape;
 
         private void drawButton_Click(object sender, EventArgs e)
         {
@@ -38,6 +65,11 @@ namespace MainFormApp
                 shapes.DrawAll(graphics);
             }
             pictureBox.Image = bitmap;
+        }
+
+        private void ShapeButtonClick(object sender, EventArgs e)
+        {
+           // currentShape = shapesTypes[((Button) sender).Text].GetConstructors().First(x => x.)
         }
 
         private void cleanButton_Click(object sender, EventArgs e)

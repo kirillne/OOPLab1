@@ -22,6 +22,7 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Ellipse class with the specified color and position and zero size.
         /// </summary>
+        [MainShapeConstracter]
         public Ellipse(Color color, Point position) : base(color, position)
         {
         }
@@ -40,7 +41,7 @@ namespace Lab1.Shapes
         /// <param name="graphics">Surfase for drawing.</param>
         public override void Draw(Graphics graphics)
         {
-            graphics.DrawEllipse(new Pen(Color, PEN_WIDTH), Position.X, Position.Y, Width, Height);
+            graphics.DrawEllipse(new Pen(Color, penWidth), Position.X, Position.Y, Width, Height);
         }
     }
 }

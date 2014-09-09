@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Lab1.Shapes
 {
     /// <summary>
@@ -23,6 +24,7 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Line class with the specified color and position and zero size.
         /// </summary>
+        [MainShapeConstracter]
         public Line(Color color, Point position) : base(color, position)
         {
         }
@@ -41,7 +43,7 @@ namespace Lab1.Shapes
         /// <param name="graphics">Surfase for drawing.</param>
         public override void Draw(Graphics graphics)
         {
-            graphics.DrawLine(new Pen(Color, PEN_WIDTH), Position, Position + new Size(Width, Height));
+            graphics.DrawLine(new Pen(Color, penWidth), Position, Position + new Size(Width, Height));
         }
     }
 }

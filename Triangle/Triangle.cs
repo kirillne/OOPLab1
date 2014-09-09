@@ -34,6 +34,7 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Triangle class with the specified color and position and zero side size.
         /// </summary>
+        [MainShapeConstracter]
         public Triangle(Color color, Point position)
             : base(color, position)
         {

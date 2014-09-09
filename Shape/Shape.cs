@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shape;
 
 namespace Lab1
 {
@@ -24,6 +25,7 @@ namespace Lab1
         /// <summary>
         /// Initializes a new instance of the Shape class with the specified color and position.
         /// </summary>
+        [MainShapeConstracter]
         protected Shape(Color color, Point position)
         {
             Color = color;
@@ -33,7 +35,7 @@ namespace Lab1
         /// <summary>
         /// With of pen.
         /// </summary>
-        protected  const float PEN_WIDTH = 5.0f;
+        protected  const float penWidth = 5.0f;
 
         /// <summary>
         /// Gets or sets the color of this Shape.
