@@ -22,7 +22,7 @@ namespace Lab1
             get { return height; }
             set
             {
-                if(height < 0) throw  new ArgumentOutOfRangeException("value", "Shape can't have nagative height");
+               // if(height < 0) throw  new ArgumentOutOfRangeException("value", "Shape can't have nagative height");
                 height = value;
             }
         }
@@ -37,7 +37,7 @@ namespace Lab1
             get { return width; }
             set
             {
-                if (width < 0) throw new ArgumentOutOfRangeException("value", "Shape can't have nagative width");
+               // if (width < 0) throw new ArgumentOutOfRangeException("value", "Shape can't have nagative width");
                 width = value;
             }
         }
