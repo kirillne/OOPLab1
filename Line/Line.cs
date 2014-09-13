@@ -24,7 +24,6 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Line class with the specified color and position and zero size.
         /// </summary>
-        [MainShapeConstracter]
         public Line(Color color, Point position) : base(color, position)
         {
         }

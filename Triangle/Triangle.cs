@@ -14,12 +14,26 @@ namespace Lab1.Shapes
     /// </summary>
     public class Triangle : PoligonBase
     {
+        private int circumscribedСircleRadius;
         private const double SIN60 = 0.86602540378443864676372317075294;
+        private int sideSize;
+
 
         /// <summary>
-        /// Gets  the size of triangel's side.
+        /// Gets  the size of triangel.
         /// </summary>
-        public int SideSize { get; private set; }
+        public override int CircumscribedСircleRadius
+        {
+            get { return circumscribedСircleRadius; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("value", "Shape can't have nagative height");
+                circumscribedСircleRadius = value;
+                sideSize =(int)(circumscribedСircleRadius*Math.Sqrt(3));
+                Points = GetTriangePointsBySideSize();
+            }
+        }
+
 
         /// <summary>
         /// Initializes a new instance of the Triangle class whith black color, (0;0) position and zero side size.
@@ -27,25 +41,24 @@ namespace Lab1.Shapes
         public Triangle()
             : base()
         {
-            SideSize = 0;
+            sideSize = 0;
             Points = GetTriangePointsBySideSize();
         }
 
         /// <summary>
         /// Initializes a new instance of the Triangle class with the specified color and position and zero side size.
         /// </summary>
-        [MainShapeConstracter]
         public Triangle(Color color, Point position)
             : base(color, position)
         {
-            SideSize = 0;
+            sideSize = 0;
             Points = GetTriangePointsBySideSize();
         }
 
         private List<Point> GetTriangePointsBySideSize()
         {
-            var triangleHieght = (int)(SideSize*SIN60);
-            return new List<Point> {new Point(0,triangleHieght), new Point(SideSize,triangleHieght ), new Point(SideSize/2, 0)};
+            var triangleHieght = (int)(sideSize*SIN60);
+            return new List<Point> {new Point(0,triangleHieght), new Point(sideSize,triangleHieght ), new Point(sideSize/2, 0)};
         }
 
         /// <summary>
@@ -54,8 +67,9 @@ namespace Lab1.Shapes
         public Triangle(Color color, Point position, int sideSize)
             : base(color, position)
         {
-            this.SideSize = sideSize;
+            this.sideSize = sideSize;
             Points = Points = GetTriangePointsBySideSize();
         }
+
     }
 }

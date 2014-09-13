@@ -13,6 +13,8 @@ namespace Lab1.Shapes
     /// </summary>
     public class Trapizoid : PoligonBase
     {
+        private int circumscribedСircleRadius;
+
         /// <summary>
         /// Gets the hight of trapizoid.
         /// </summary>
@@ -43,15 +45,12 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Trapizoid class with the specified color and position and zero size.
         /// </summary>
-        [MainShapeConstracter]
         public Trapizoid(Color color, Point position)
             : base(color, position)
         {
-           
-
             Height = 0;
             Width = 0;
-            Angle = Angle = Math.PI / 4;
+            Angle  = Math.PI / 3;
             Points = GetTrapizoidPoints();
         }
 
@@ -84,5 +83,22 @@ namespace Lab1.Shapes
             Points = GetTrapizoidPoints();
         }
 
+        /// <summary>
+        /// Gets or set trapizoid's size.
+        /// </summary>
+       
+        public override int CircumscribedСircleRadius
+        {
+            get { return circumscribedСircleRadius; }
+            set
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException("value", "Shape can't have nagative height");
+                circumscribedСircleRadius = value;
+                Height = circumscribedСircleRadius/2;
+                Width = circumscribedСircleRadius;
+                Angle = Math.PI/3;
+                Points = GetTrapizoidPoints();
+            }
+        }
     }
 }

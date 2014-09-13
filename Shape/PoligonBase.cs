@@ -43,6 +43,11 @@ namespace Lab1
             Points = new List<Point>(points);
         }
 
+        /// <summary>
+        /// Get or set shape's size.
+        /// </summary>
+        public abstract int CircumscribedСircleRadius { get; set; }
+
         ///<summary>
         /// Draw this Shape on graphics.
         /// </summary>

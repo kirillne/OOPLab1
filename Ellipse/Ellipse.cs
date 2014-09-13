@@ -22,7 +22,6 @@ namespace Lab1.Shapes
         /// <summary>
         /// Initializes a new instance of the Ellipse class with the specified color and position and zero size.
         /// </summary>
-        [MainShapeConstracter]
         public Ellipse(Color color, Point position) : base(color, position)
         {
         }

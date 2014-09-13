@@ -105,6 +105,11 @@ namespace MainFormApp
                     rectlangeBaseShape.Height = e.Y - mouseDownPoint.Y;
                     rectlangeBaseShape.Width = e.X - mouseDownPoint.X;
                 }
+                else 
+                {
+                    var poligonBase = currentShape as PoligonBase;
+                    poligonBase.CircumscribedСircleRadius = VectorSize(e.Y, mouseDownPoint.Y, e.X, mouseDownPoint.X);
+                }
 
                 var tempBitmap = new Bitmap(mainBitmap);
                 using (var graphics = Graphics.FromImage(tempBitmap))
@@ -113,6 +118,11 @@ namespace MainFormApp
                 }
                 pictureBox.Image = tempBitmap;
             }
+        }
+
+        private int VectorSize( int startY, int finalY, int startX, int finishX)
+        {
+            return (int)Math.Sqrt((startY - finalY)*(startY - finalY) +(startX - finishX)*(startX - finishX));
         }
 
         private void PictureBoxMouseUp(object sender, MouseEventArgs e)

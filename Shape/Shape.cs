@@ -24,7 +24,6 @@ namespace Lab1
         /// <summary>
         /// Initializes a new instance of the Shape class with the specified color and position.
         /// </summary>
-        [MainShapeConstracter]
         protected Shape(Color color, Point position)
         {
             Color = color;
