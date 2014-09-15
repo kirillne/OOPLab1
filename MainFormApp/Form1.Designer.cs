@@ -54,7 +54,7 @@
             this.ClientSize = new System.Drawing.Size(853, 545);
             this.Controls.Add(this.pictureBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ООП л/р№2. Ленчик Кирилл гр. 251006";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
