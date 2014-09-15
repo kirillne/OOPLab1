@@ -20,6 +20,10 @@ namespace MainFormApp
 
         private Bitmap mainBitmap;
 
+        private Bitmap tempBitmap;
+
+        private Graphics tempGraphics;
+
         private Dictionary<String, Type> shapesTypes = new Dictionary<string, Type>(); 
 
         private List<Button> shapeButtons = new List<Button>();
@@ -41,6 +45,8 @@ namespace MainFormApp
             AddButtons();
             currentShapeType = shapesTypes.First(x => true).Value;
             mainBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            tempBitmap = new Bitmap(mainBitmap);
+            tempGraphics = Graphics.FromImage(tempBitmap);
         }
 
         private void AddButtons()
@@ -82,12 +88,6 @@ namespace MainFormApp
             currentShapeType = shapesTypes[((Button) sender).Text];
         }
 
-        private void cleanButton_Click(object sender, EventArgs e)
-        {
-            pictureBox.Image.Dispose();
-            pictureBox.Image = null;
-        }
-
         private void PictureBoxMouseDown(object sender, MouseEventArgs e)
         {
             currentShape = (Shape)Activator.CreateInstance(currentShapeType, Color.Green, e.Location);
@@ -111,11 +111,9 @@ namespace MainFormApp
                     poligonBase.CircumscribedСircleRadius = VectorSize(e.Y, mouseDownPoint.Y, e.X, mouseDownPoint.X);
                 }
 
-                var tempBitmap = new Bitmap(mainBitmap);
-                using (var graphics = Graphics.FromImage(tempBitmap))
-                {
-                    currentShape.Draw(graphics);
-                }
+                tempGraphics.Clear(Color.White);
+                tempGraphics.DrawImage(mainBitmap,new Point(0,0));
+                currentShape.Draw(tempGraphics);
                 pictureBox.Image = tempBitmap;
             }
         }
@@ -133,10 +131,16 @@ namespace MainFormApp
                 {
                     currentShape.Draw(graphics);
                 }
-                pictureBox.Image.Dispose();
                 pictureBox.Image = mainBitmap;
                 isDrawingModeEnabled = false;
             }
+        }
+
+        public new void Dispose()
+        {
+            tempGraphics.Dispose();
+            tempBitmap.Dispose();
+            base.Dispose();
         }
     }
 }
